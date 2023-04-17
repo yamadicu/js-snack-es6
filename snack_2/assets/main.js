@@ -1,36 +1,38 @@
 const squadre = [
     {
         nome : 'milan',
-        punti : '0',
-        falli : '0'
+        punti : 0,
+        falli : 0
     }, {
         nome : 'juve',
-        punti : '0',
-        falli : '0'
+        punti : 0,
+        falli : 0
     }, {
         nome : 'inter',
-        punti : '0',
-        falli : '0'
+        punti : 0,
+        falli : 0
     }, {
         nome : 'napoli',
-        punti : '0',
-        falli : '0'
+        punti : 0,
+        falli : 0
     }
 ]
 
-squadre.forEach((element, fall) =>{
-    const {punti} = element;
-    const {falli} = fall;
-
-    punti = random(9);
-    falli = random(9);
-    console.log(squadre);
+squadre.forEach((element) =>{
+    element.punti = random()
+    element.falli = random()
 
 })
 
-//funzione per creare numeri casuali
-function random (max){
-    return Math.floor(Math.random() * max) + 1;
-}
+console.log(squadre);
 
-console.log(random());
+let newSquadre = squadre.map( ({ nome, falli}) =>{
+    return {nome, falli}
+})
+
+console.log(newSquadre);
+
+//funzione per creare numeri casuali
+function random (){
+    return Math.floor(Math.random() * 99) + 1;
+}
