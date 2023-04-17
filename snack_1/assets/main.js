@@ -1,29 +1,28 @@
 const bici = [
     {
         nome : 'marco',
-        peso : '12'
+        peso : 12
     }, {
         nome : 'giulio',
-        peso : '10'
+        peso : 10
     }, {
         nome : 'paolo',
-        peso : '15'
+        peso : 15
     }, {
         nome : 'franco',
-        peso : '5'
+        peso : 5
     }, {
         nome : 'andrea',
-        peso : '8'
+        peso : 8
     }
 ]
 
-let pesoMin = bici[0].peso;
+let pesoMin = bici[0];
 
 //ciclo per cercare la bici più leggera
 bici.forEach((element) =>{
-    const {peso} = element;
 
-    if (peso < pesoMin){
+    if (element.peso < pesoMin.peso){
         pesoMin = element;
     }
 });
@@ -34,5 +33,5 @@ console.log(pesoMin);
 const {nome, peso} = pesoMin;
 
 document.getElementById('stampa').innerHTML = `
-<p> la bici più veloce è quella di ${nome} che pesa ${peso} </p>
+<p> la bici più veloce è quella di ${nome} che pesa ${peso}kg </p>
 `
